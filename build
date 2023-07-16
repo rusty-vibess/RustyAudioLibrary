@@ -1,0 +1,155 @@
+#! /bin/sh
+
+# Start message
+echo "Starting RustyAudioLib build script... \n"
+
+# Set script to exit on makefile failure
+set -e
+
+# Get current working directory
+top_dir=$(pwd)
+
+# CD into PortAudio to run configuration script
+cd $top_dir/components/portaudio
+
+# Running configuration script and giving prefix to install destination
+./configure --prefix="$top_dir/components/RustyAudioLibrary-v0.7"
+
+# Running Portaudio install script
+make install
+
+# CD to RustyAudioLib to run build script
+cd "$top_dir/components/RustyAudioLibrary-v0.7"
+
+# Running RustyAudioLib build script
+make
+
+# Copying created PortAudio.h file to appropriate directory
+cp "$top_dir/components/RustyAudioLibrary-v0.7/include/portaudio.h"  "$top_dir/components/RustyAudioLibrary-v0.7/dist/include/engine"
+
+# CD back to working directory
+cd "$top_dir"
+
+# Create project directory
+mkdir -p project
+
+# CD in to project directory
+cd "$top_dir/project"
+
+# Create include directory
+mkdir -p include
+
+# Create libraries directory
+mkdir -p libs
+
+# Copy relevant files from RustyAudioLib build to user project folder
+cp -r "$top_dir/components/RustyAudioLibrary-v0.7/dist/include/" "$top_dir/project/include"
+cp -r "$top_dir/components/RustyAudioLibrary-v0.7/lib/" "$top_dir/project/libs"
+cp -r "$top_dir/components/RustyAudioLibrary-v0.7/bin/" "$top_dir/project/libs"
+
+# Create Makefile
+echo "\
+# Try to find an available C++ compiler, g++ being the first choice
+CC = \$(shell command -v g++ || command -v clang++ || command -v c++)
+
+# Throw error if no C++ compiler
+ifeq (\$(CC),)
+  \$(error No C++ compiler found. Please install g++, clang++, or c++)
+endif
+
+# Set the compiler flags for debugging, warnings, and C++17 standard
+CFLAGS = -g -Wall -std=c++17
+
+# Get all unique library names, without the 'lib' prefix and extension
+LIBS = \$(basename \$(notdir \$(wildcard libs/lib*.a libs/lib*.so libs/lib*.dylib)))
+# Remove 'lib' prefix
+LIBS := \$(patsubst lib%,%,\$(LIBS))
+
+# Set the linker flags for libraries in the lib directory
+LDFLAGS = -Llibs \$(addprefix -l, \$(LIBS))
+
+# Find all header file directories in the include directory
+INC_DIRS = \$(shell find include -type d)
+
+# Create a list of include flags for the compiler from the INC_DIRS variable
+INC_FLAGS = \$(addprefix -I, \$(INC_DIRS))
+
+# Define the build and binary directories
+BUILD_DIR = build
+BIN_DIR = bin
+
+# Define the final executable name
+EXECUTABLE = \$(BIN_DIR)/program
+
+# Define the main source file and its corresponding object file
+MAIN_SOURCE = main.cpp
+MAIN_OBJECT = \$(BUILD_DIR)/main.o
+
+# Default target
+all: \$(BIN_DIR) \$(BUILD_DIR) \$(MAIN_OBJECT) \$(EXECUTABLE)
+
+# Create the binary directory
+\$(BIN_DIR):
+	mkdir -p \$(BIN_DIR)
+
+# Create the build directory
+\$(BUILD_DIR):
+	mkdir -p \$(BUILD_DIR)
+
+# Compile the main source file into an object file
+\$(MAIN_OBJECT): \$(MAIN_SOURCE) | \$(BUILD_DIR)
+	\$(CC) \$(CFLAGS) \$(INC_FLAGS) -c -o \$@ \$<
+
+# Build the executable
+\$(EXECUTABLE): \$(MAIN_OBJECT) | \$(BIN_DIR)
+	\$(CC) \$(CFLAGS) -o \$@ \$< \$(LDFLAGS)
+
+# Remove the build and binary directories
+clean:
+	-rm -rf \$(BUILD_DIR) \$(BIN_DIR)
+
+run:
+	./bin/program" > Makefile
+
+# Create main.cpp for user
+echo "#include <iostream>
+#include \"RustyAudioLib.hpp\" // This #include is needed to access RustyAudioLbrary functions
+
+int main()
+{
+  RustyAudioLibAPI lib; // Library object is of type RustyAudioLibAPI
+
+  std::cout << std::endl << \"RustyAudioLibrary -- TEST RUN \" << std::endl << std::endl;
+
+  return 0;
+}" > main.cpp
+
+# Build project and run to test if it works
+make && make run
+
+# Return to top
+cd $top_dir
+
+# Generate user docs link
+echo "<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=\"refresh\" content=\"0; url=./components/RustyAudioLibrary-v0.7/docs/html/index.html\" />
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a href='./components/RustyAudioLibrary-v0.7/docs/html/index.html'>link</a>.</p>
+</body>
+</html>
+" > docs.html
+
+# Exit message
+echo "
+--------------------------------------------------------------------------------------------------
+Build finished...
+Assuming no issues your ready to run RustyAudioLib project is now in the 'project/' directory.
+Refer to 'docs.html' for more detailed information on how to use RustyAudioLib.
+
+Exiting..."
+
+# Open docs welcome page
+(open docs.html || start docs.html) &> /dev/null

@@ -1,0 +1,30 @@
+#! /bin/sh
+
+# Start message
+echo "Starting RustyAudioLib reset script... \n"
+
+# Get current working directory
+top_dir=$(pwd)
+
+# Remove project directory
+rm -r project
+
+# CD into RustyAudioLib
+cd "$top_dir/components/RustyAudioLibrary-v0.7"
+
+# Run it's clean script
+make clean
+
+# Manually remove additional directories
+rm -r include
+rm -r lib
+rm -r "$top_dir/components/portaudio/lib"
+
+# Return to top
+cd $top_dir
+
+# Remove docs generation
+rm docs.html
+
+# Exit message
+echo "\nRustyAudioLib build destroyed..."
