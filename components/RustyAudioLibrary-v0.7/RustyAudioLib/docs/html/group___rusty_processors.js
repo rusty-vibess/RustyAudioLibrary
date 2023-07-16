@@ -1,0 +1,77 @@
+var group___rusty_processors =
+[
+    [ "RustyCompressor", "class_rusty_compressor.html", [
+      [ "RustyCompressor", "class_rusty_compressor.html#afd11505b6695ae42356150f39b7d5e35", null ],
+      [ "process", "class_rusty_compressor.html#a473e0047fa0a07cb854c7c242329fb0b", null ],
+      [ "setModulatorForParameter", "class_rusty_compressor.html#a3ad4980176b0a2a2f069b1fe7685a963", null ],
+      [ "setParameter", "class_rusty_compressor.html#a74520b897a95d7ba17f0143e04b77c81", null ],
+      [ "getProcessorType", "class_rusty_compressor.html#a2db44f04b264ef9f739eb2c963b90e7d", null ],
+      [ "getParams", "class_rusty_compressor.html#a74258272840d2b8fe09741932702f37e", null ],
+      [ "_threshold", "class_rusty_compressor.html#a372e8d54a1d2ad8a1414c2106789bc53", null ],
+      [ "_kneeWidth", "class_rusty_compressor.html#af0e85f5d91586c409a0636fa76afa38d", null ],
+      [ "_ratio", "class_rusty_compressor.html#a2bdb529f0678ad96108454a4bc8d5a10", null ],
+      [ "_attack", "class_rusty_compressor.html#ab1afb8ef02d799ae4a5d6a34bdf171e7", null ],
+      [ "_release", "class_rusty_compressor.html#aca739eeb0892e07d64493177cfcc9010", null ],
+      [ "_makeupGain", "class_rusty_compressor.html#a6a53ce68c4354086da930d33be2b4499", null ],
+      [ "x_g", "class_rusty_compressor.html#ad3786d4c826b8dc543ecebfbede160da", null ],
+      [ "y_g", "class_rusty_compressor.html#a94e85c2dab14503f4e994975c9c9afb5", null ],
+      [ "x_l", "class_rusty_compressor.html#a924e1d6614a50a69f1add415e638e2e0", null ],
+      [ "y_l_dB", "class_rusty_compressor.html#a3776a1c35601a751951a3078d173fd7e", null ],
+      [ "y_l", "class_rusty_compressor.html#a4058a77e3de61ffa996e1393818610d1", null ],
+      [ "y_l_prev", "class_rusty_compressor.html#ae2084301986602f4356aedf662e4ea0c", null ],
+      [ "cv", "class_rusty_compressor.html#a79ece2922686045e58aeb57cbb4d5b17", null ],
+      [ "read_ptr", "class_rusty_compressor.html#a5c94c772614267b41249877c2959ec17", null ]
+    ] ],
+    [ "RustyFilter", "class_rusty_filter.html", [
+      [ "RustyFilter", "class_rusty_filter.html#a2983bf88fb9c81d9696a8ecb36c91e7a", null ],
+      [ "process", "class_rusty_filter.html#a16fc7d07cedea2b230139e69c51f2969", null ],
+      [ "setModulatorForParameter", "class_rusty_filter.html#adf9ffbbc2085bc57ca461159a6814871", null ],
+      [ "setParameter", "class_rusty_filter.html#a2103b2ffeb65ee5b274842786e0731ba", null ],
+      [ "getProcessorType", "class_rusty_filter.html#a6d71f6be7534b9bd379ad4393d7bde06", null ],
+      [ "getParams", "class_rusty_filter.html#a1914685bafd6ed17f29b3674c49e4331", null ],
+      [ "calcCoefficients", "class_rusty_filter.html#a9aa151e85e43a2136fea06bfd2d45c2e", null ],
+      [ "constrain", "class_rusty_filter.html#a832e7f7e01e93bce4a4c18c437bee520", null ],
+      [ "_a1", "class_rusty_filter.html#a69e4a1b42dd2e0715c2118a9c8ffea6f", null ],
+      [ "_a2", "class_rusty_filter.html#a64cdcdb395b0141b69fade3d3cf01ea0", null ],
+      [ "_b0", "class_rusty_filter.html#a599346e09c2aaf690ebc2a013a90c2bb", null ],
+      [ "_b1", "class_rusty_filter.html#a0e807db60bcb3b5c7f2fbb0c0ce7a2ba", null ],
+      [ "_b2", "class_rusty_filter.html#af9ad1073326ca6f1a30c9615be461cc9", null ],
+      [ "_x1", "class_rusty_filter.html#a6eaafa23d310cd83fabb321c77a52df9", null ],
+      [ "_y1", "class_rusty_filter.html#a38147543bf03b5f9a8adaea771d59815", null ],
+      [ "_x2", "class_rusty_filter.html#a0658c754c526569b3204f15b32657fe1", null ],
+      [ "_y2", "class_rusty_filter.html#ae47e08069aa3d5cb77f97270760df7ab", null ],
+      [ "_k", "class_rusty_filter.html#a71be143d07b45aa325c64ec9afb77ca2", null ],
+      [ "_norm", "class_rusty_filter.html#afec118368f4096e8a747cadf8cd4b9ce", null ],
+      [ "_sum", "class_rusty_filter.html#a2e0fc025370a5f2a088d272306ca1db0", null ],
+      [ "_q", "class_rusty_filter.html#a7994268fa89ff0c3dd3e426fc83003f5", null ],
+      [ "_type", "class_rusty_filter.html#a9e915d18d383483fbc380ca678bf3c01", null ]
+    ] ],
+    [ "RustyGain", "class_rusty_gain.html", [
+      [ "RustyGain", "class_rusty_gain.html#a0b1649a0c825d752467174b7f586c218", null ],
+      [ "process", "class_rusty_gain.html#afbe1661aa00b0381fdf666a598275a84", null ],
+      [ "setModulatorForParameter", "class_rusty_gain.html#a854fadfe60bd2f392a1be2913c21288e", null ],
+      [ "setParameter", "class_rusty_gain.html#a0b007d4ccf22983da966ae1c8acbd129", null ],
+      [ "getProcessorType", "class_rusty_gain.html#a1b55ce6f3bb2a164bd2945a97949dea4", null ],
+      [ "getParams", "class_rusty_gain.html#a087f0fff0f3b314f7cc47b8a66c7c324", null ],
+      [ "_gain", "class_rusty_gain.html#ac50dc42841dcd95aec70d1208928fba8", null ]
+    ] ],
+    [ "RustyOverdrive", "class_rusty_overdrive.html", [
+      [ "RustyOverdrive", "class_rusty_overdrive.html#a1d798b7b4b8ab2c24782f6fbfaf55e9f", null ],
+      [ "process", "class_rusty_overdrive.html#afa8090554d468758e650e76bbcd7c2f0", null ],
+      [ "setModulatorForParameter", "class_rusty_overdrive.html#a553b5d8e9f2f2701ced437971a28e67b", null ],
+      [ "setParameter", "class_rusty_overdrive.html#a5d1c6109e54dfd418c079f1a97b468ac", null ],
+      [ "getProcessorType", "class_rusty_overdrive.html#a400e1105bcd2270dcaa703053f9de376", null ],
+      [ "getParams", "class_rusty_overdrive.html#a688e04780f7737c92c9c105f9c8321b6", null ],
+      [ "distortSample", "class_rusty_overdrive.html#a645231e7d1fb36a66ebae50d9fd2f858", null ],
+      [ "_drive", "class_rusty_overdrive.html#aba453f0bfe0584414991bd30f3505a8d", null ]
+    ] ],
+    [ "RustyProcessor", "class_rusty_processor.html", [
+      [ "process", "class_rusty_processor.html#acc12cb06eafb02e8181921ef3a32af99", null ],
+      [ "setModulatorForParameter", "class_rusty_processor.html#adfad1f75cc0ad36d12ba2c1098a6704b", null ],
+      [ "setParameter", "class_rusty_processor.html#a42d8468689411f60e4a37f23d0b9a583", null ],
+      [ "isNumeric", "class_rusty_processor.html#ae8e322e69cf4b1458b429b86d6cca085", null ],
+      [ "getProcessorType", "class_rusty_processor.html#aabfd27a0d2729b0be25124e492679675", null ],
+      [ "getParams", "class_rusty_processor.html#a8676c987cffa7a978ccea55905d18814", null ],
+      [ "_modulators", "class_rusty_processor.html#ad8e8ed1ae04123477d3bcfd2fd2a7b2d", null ]
+    ] ]
+];

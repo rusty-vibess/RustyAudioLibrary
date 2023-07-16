@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['paclipoff_0',['paClipOff',['../portaudio_8h.html#a837b8a81be3f7e36c96003e0d8dcec12',1,'portaudio.h']]],
+  ['pacustomformat_1',['paCustomFormat',['../portaudio_8h.html#aba595f6b645c8134a8ac3004957b9ff7',1,'portaudio.h']]],
+  ['paditheroff_2',['paDitherOff',['../portaudio_8h.html#add037e93aec78fa8d67f7a59ed500707',1,'portaudio.h']]],
+  ['pafloat32_3',['paFloat32',['../portaudio_8h.html#a2f16d29916725b8791eae60ab9e0b081',1,'portaudio.h']]],
+  ['paformatissupported_4',['paFormatIsSupported',['../portaudio_8h.html#a400df642339bf4112333060af6a43c0f',1,'portaudio.h']]],
+  ['paframesperbufferunspecified_5',['paFramesPerBufferUnspecified',['../portaudio_8h.html#ac1e20b97c1858a59bc62823573c59f0b',1,'portaudio.h']]],
+  ['painputoverflow_6',['paInputOverflow',['../portaudio_8h.html#aea144f0edaf02d0ac8b113f41fb95c47',1,'portaudio.h']]],
+  ['painputunderflow_7',['paInputUnderflow',['../portaudio_8h.html#a57d1879f52406bdedfdda8f79f458e15',1,'portaudio.h']]],
+  ['paint16_8',['paInt16',['../portaudio_8h.html#ab284f8e0a161d78ede863aec45461dbd',1,'portaudio.h']]],
+  ['paint24_9',['paInt24',['../portaudio_8h.html#a7f891a0bd9e94a94a8f446c176b749e7',1,'portaudio.h']]],
+  ['paint32_10',['paInt32',['../portaudio_8h.html#a6fea69f3d81b628288325c06310b2fcf',1,'portaudio.h']]],
+  ['paint8_11',['paInt8',['../portaudio_8h.html#a058ecfb48ac9f0efad7a7b0d446efe3e',1,'portaudio.h']]],
+  ['pamakeversionnumber_12',['paMakeVersionNumber',['../portaudio_8h.html#ac20e3ac459960f140910d94b5a61125e',1,'portaudio.h']]],
+  ['paneverdropinput_13',['paNeverDropInput',['../portaudio_8h.html#ad89be5ed5279fc4c4a8495c775e1d5d5',1,'portaudio.h']]],
+  ['panodevice_14',['paNoDevice',['../portaudio_8h.html#a8c26dd5e6f28bb4cda7a1f5460282297',1,'portaudio.h']]],
+  ['panoflag_15',['paNoFlag',['../portaudio_8h.html#ad33384abe3754a39f4773f2561773595',1,'portaudio.h']]],
+  ['panoninterleaved_16',['paNonInterleaved',['../portaudio_8h.html#a1d79f0b88812cef5364b276dbbc898b5',1,'portaudio.h']]],
+  ['paoutputoverflow_17',['paOutputOverflow',['../portaudio_8h.html#ac22bb260d47b348bd3aab8813fd45462',1,'portaudio.h']]],
+  ['paoutputunderflow_18',['paOutputUnderflow',['../portaudio_8h.html#aa17c91c859b12ebbf53a1440def53c89',1,'portaudio.h']]],
+  ['paplatformspecificflags_19',['paPlatformSpecificFlags',['../portaudio_8h.html#a8522957e1bf814b9782d3a0e314c8b51',1,'portaudio.h']]],
+  ['paprimeoutputbuffersusingstreamcallback_20',['paPrimeOutputBuffersUsingStreamCallback',['../portaudio_8h.html#ad7b862a223edd680d7985c33c847e31d',1,'portaudio.h']]],
+  ['paprimingoutput_21',['paPrimingOutput',['../portaudio_8h.html#ad6616980c2259866a39eb2b76fa4697d',1,'portaudio.h']]],
+  ['pauint8_22',['paUInt8',['../portaudio_8h.html#ad826044e4ffe7b16bf990803ab77df37',1,'portaudio.h']]],
+  ['pausehostapispecificdevicespecification_23',['paUseHostApiSpecificDeviceSpecification',['../portaudio_8h.html#a14795fe3377c3b037025a61e550d44b5',1,'portaudio.h']]]
+];
