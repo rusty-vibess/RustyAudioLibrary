@@ -127,20 +127,11 @@ int main()
 # Build project and run to test if it works
 make && make run
 
+# Build instruction
+echo "Run \`make && make run\` to build and run your main.cpp" > README.txt
+
 # Return to top
 cd $top_dir
-
-# Generate user docs link
-echo "<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv=\"refresh\" content=\"0; url=./components/RustyAudioLibrary-v0.7/docs/html/index.html\" />
-</head>
-<body>
-    <p>If you are not redirected automatically, follow this <a href='./components/RustyAudioLibrary-v0.7/docs/html/index.html'>link</a>.</p>
-</body>
-</html>
-" > docs.html
 
 # Exit message
 echo "
